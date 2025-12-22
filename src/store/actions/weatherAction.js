@@ -1,4 +1,7 @@
 import { FETCH_CURRENT_SUCCESS, FETCH_FORECAST_SUCCESS, FETCH_WEATHER_PENDING, SET_CITY } from '../constants/weatherConstants'
+import api from '../../config/axios'
+
+const API_KEY= import.meta.env.VITE_WEATHER_API
 
 export const fetchWeatherPending=()=>{
     return{
@@ -31,4 +34,9 @@ export const setCity = (data)=>{
         type:SET_CITY,
         payload:data
     }
+}
+
+export const fetchWeather = (city='pune')=>{
+    response= api.get(`${city}&appid=${API_KEY}`)
+    
 }

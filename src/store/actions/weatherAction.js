@@ -36,7 +36,13 @@ export const setCity = (data)=>{
     }
 }
 
-export const fetchWeather = (city='pune')=>{
-    response= api.get(`${city}&appid=${API_KEY}`)
+
+export const fetchWeather = (city)=>{
+    return async (dispatch) =>{
+        let forecastDetails=await api.get(`forecast?q=${city}&appid=${API_KEY}`)
+
+        let currentWeatherDetails=await api.get(`weather?q=${city}&appid=${API_KEY}`)
+
+    }
     
 }

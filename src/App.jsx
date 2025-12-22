@@ -1,14 +1,14 @@
 import './App.css'
-import {useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {fetchWeather} from './store/actions/weatherAction'
 
 const App = () => {
   const dispatch=useDispatch()
-
+  const state=useSelector(state=>state)
+  console.log(state)
   const clickHandler= ()=>{
     let data= dispatch(fetchWeather("pune"))
-    console.log(data)
-    
+    // console.log(data)
   }
 
 

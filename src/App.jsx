@@ -1,6 +1,7 @@
 import './App.css'
 import {useDispatch, useSelector} from 'react-redux'
 import {fetchWeather} from './store/actions/weatherAction'
+import Search from './components/Search'
 
 const App = () => {
   const dispatch=useDispatch()
@@ -15,10 +16,11 @@ const App = () => {
 
 
   return (
-    <div className='w-full h-screen flex place-items-center'>
+    <div className='w-full h-screen flex flex-col'>
       <button onClick={clickHandler} className='bg-red-300 p-5 rounded-2xl'>
         Click Here
       </button>
+      <Search/>
     </div>
   )
 }

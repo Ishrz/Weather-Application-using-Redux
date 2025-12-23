@@ -18,7 +18,7 @@ const clickHandler=()=>{
 }
 
   return (
-    <div className="join">
+    <div className="join gap-3">
       <label className="input">
         <svg
           className="h-[1em] opacity-50"
@@ -38,12 +38,12 @@ const clickHandler=()=>{
         </svg>
         <input type="search"
               required 
-              placeholder="Search"
+              placeholder="Enter City Name"
               value={cityState}
               onChange={changeHandler}
               />
       </label>
-      <button onClick={clickHandler} className="btn btn-neutral join-item">Join</button>
+      <button onClick={clickHandler} className="btn btn-neutral join-item">Search</button>
     </div>
   );
 };

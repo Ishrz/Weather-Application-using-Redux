@@ -51,7 +51,7 @@ export const fetchWeather = (city) => {
       let forecastDetails = await api.get(
         `forecast?q=${city}&appid=${API_KEY}`
       );
-
+      
       let currentWeatherDetails = await api.get(
         `weather?q=${city}&appid=${API_KEY}`
       );

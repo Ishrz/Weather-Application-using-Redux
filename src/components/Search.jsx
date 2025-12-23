@@ -4,11 +4,11 @@ import { fetchWeather, setCity } from "../store/actions/weatherAction";
 const Search = () => {
 
   const dispatch=useDispatch()
-  const cityState=useSelector(state=>state.city)
-    const currentState=useSelector(state=>state.current)
+  const cityState=useSelector(state=>state.weatherDetails.city)
+    const currentState=useSelector(state=>state.weatherDetails.currentState)
 
-
-console.log(currentState)
+  console.log(currentState)
+console.log(cityState)
 
 const changeHandler=(evt)=>{
     dispatch(setCity(evt.target.value))

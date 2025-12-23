@@ -10,7 +10,7 @@ const CurrentWeather = () => {
   // console.log(loading)
 
   if (loading)
-    return <span className="loading loading-bars loading-xl "></span>
+    return <div className="w-full h-1/2 flex items-center justify-center "><span className="loading loading-bars loading-xl "></span></div>
   if (!current) return null;
   if (error) return <p>{ error }</p>
 

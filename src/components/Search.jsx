@@ -7,8 +7,6 @@ const Search = () => {
   const cityState=useSelector(state=>state.weatherDetails.city)
     const currentState=useSelector(state=>state.weatherDetails.currentState)
 
-  console.log(currentState)
-console.log(cityState)
 
 const changeHandler=(evt)=>{
     dispatch(setCity(evt.target.value))
@@ -41,6 +39,7 @@ const clickHandler=()=>{
         <input type="search"
               required 
               placeholder="Search"
+              value={cityState}
               onChange={changeHandler}
               />
       </label>

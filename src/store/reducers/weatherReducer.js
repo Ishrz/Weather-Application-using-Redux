@@ -1,6 +1,6 @@
 import {FETCH_WEATHER_PENDING,FETCH_CURRENT_SUCCESS,FETCH_FORECAST_SUCCESS,FETCH_WEATHER_ERROR,SET_CITY} from '../constants/weatherConstants'
 const initialState={
-    city:null,
+    city:"",
     current:null,
     forecast:null,
     loading:false,

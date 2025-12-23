@@ -6,8 +6,8 @@ import { useEffect } from 'react'
 
 const App = () => {
   const dispatch=useDispatch()
-  // const state=useSelector(state=>state.current)
-  // console.log(state)
+  const currentWeatherState=useSelector(state=>state.weatherDetails.current)
+  console.log(currentWeatherState)
 
   useEffect(()=>{
    dispatch(fetchWeather("pune")) 
